@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsSamples.SearchBar.SearchBarSample">
+  <StackLayout Orientation="Vertical">
+    <!--Just switch the SearchBars to see the difference-->
+    <!--<SearchBar Text="{Binding SearchText, Mode=TwoWay}" Placeholder="SearchBar using the search command." SearchCommand="{Binding SearchCommand}"/>-->
+    <SearchBar Text="{Binding SearchText, Mode=TwoWay}" Placeholder="SearchBar search on text changed." TextChanged="SearchBar_OnTextChanged"/>
+    <ListView ItemsSource="{Binding Items}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
