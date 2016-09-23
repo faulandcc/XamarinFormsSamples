@@ -5,5 +5,6 @@
   <StackLayout Orientation="Vertical">
     <Label Text="Welcome to my Xamarin Forms samples"/>
     <Button x:Name="SearchBarSampleButton" Text="SearchBar" Clicked="SearchBarSampleButton_OnClicked"/>
+    <Button x:Name="GesturePatternSampleButton" Text="GesturePattern" Clicked="GesturePatternSampleButton_OnClicked"></Button>
   </StackLayout>
 </ContentPage>

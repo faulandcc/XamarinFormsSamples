@@ -8,12 +8,17 @@ using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Ioc;
+using Xamarin.Forms;
+using XamarinFormsSamples.Services;
+using XamarinFormsSamples.UWP.Services;
+using Application = Windows.UI.Xaml.Application;
+using Frame = Windows.UI.Xaml.Controls.Frame;
 
 namespace XamarinFormsSamples.UWP
 {
@@ -78,6 +83,13 @@ namespace XamarinFormsSamples.UWP
 			}
 			// Ensure the current window is active
 			Window.Current.Activate();
+
+			var windowsDeviceService = new WindowsDeviceService()
+			{
+				DeviceWidth = Window.Current.Bounds.Width,
+				DeviceHeight = Window.Current.Bounds.Height
+			};
+			SimpleIoc.Default.Register<IDeviceService>(() => windowsDeviceService, true);
 		}
 
 		/// <summary>

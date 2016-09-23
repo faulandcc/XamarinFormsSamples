@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
+using Xamarin.Forms;
 
 namespace XamarinFormsSamples
 {
@@ -7,6 +9,7 @@ namespace XamarinFormsSamples
 		public App()
 		{
 			// The root page of your application
+			ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 			MainPage = new NavigationPage(new StartPage());
 		}
 
