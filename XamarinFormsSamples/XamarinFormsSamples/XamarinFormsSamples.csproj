@@ -41,7 +41,9 @@
       <DependentUpon>GesturePatternSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="GesturePattern\GesturePatternView.cs" />
+    <Compile Include="GesturePattern\GestureSampleViewModel.cs" />
     <Compile Include="GesturePattern\GestureTouchPoint.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchBar\SearchBarSample.xaml.cs">
       <DependentUpon>SearchBarSample.xaml</DependentUpon>
