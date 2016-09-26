@@ -23,6 +23,13 @@ namespace XamarinFormsSamples.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+
+			// TODO:Replace this licence key by your own MR GESTURES licence key.
+			// This licence key will only work, if your app is called "GestureSample".
+			// We use the Test-LicenceKey from the MR GESTURES SAMPLE APP (https://github.com/MichaelRumpler/GestureSample).
+			// Details, see: http://www.mrgestures.com/
+			MR.Gestures.iOS.Settings.LicenseKey = "ALZ9-BPVU-XQ35-CEBG-5ZRR-URJQ-ED5U-TSY8-6THP-3GVU-JW8Z-RZGE-CQW6";
+
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);

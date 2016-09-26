@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gesturePattern="clr-namespace:XamarinFormsSamples.GesturePattern;assembly=XamarinFormsSamples"
              x:Class="XamarinFormsSamples.GesturePattern.GesturePatternSample">
-  <gesturePattern:GesturePatternView HeightRequest="500" WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Blue">
-    <BoxView HeightRequest="50" WidthRequest="50" BackgroundColor="Yellow" HorizontalOptions="Start" VerticalOptions="Start"/>
-  </gesturePattern:GesturePatternView>
+  <gesturePattern:GesturePatternView x:Name="MyGesturePatternView" HeightRequest="500" WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Blue"
+                                     TouchPointText="&#xf10c;" TouchPointHighlightText="&#xf111;" TouchPointTextColor="White" TouchPointHighlightTextColor="Yellow"/>
 </ContentPage>

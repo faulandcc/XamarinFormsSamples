@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using ContentPage = Xamarin.Forms.ContentPage;
 
 namespace XamarinFormsSamples.GesturePattern
 {
@@ -13,6 +7,7 @@ namespace XamarinFormsSamples.GesturePattern
 		public GesturePatternSample()
 		{
 			InitializeComponent();
+			this.MyGesturePatternView.CreateTouchInterface();
 		}
 	}
 }
