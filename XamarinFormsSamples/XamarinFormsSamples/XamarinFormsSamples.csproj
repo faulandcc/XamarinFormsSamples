@@ -53,6 +53,10 @@
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Video\VideoPlayerSample.xaml.cs">
+      <DependentUpon>VideoPlayerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Video\VideoView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SearchBar\SearchBarSample.xaml">
@@ -101,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GesturePattern\GesturePatternSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Video\VideoPlayerSample.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

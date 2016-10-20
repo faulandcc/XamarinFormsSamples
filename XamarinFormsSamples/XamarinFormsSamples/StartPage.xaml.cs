@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using XamarinFormsSamples.GesturePattern;
 using XamarinFormsSamples.SearchBar;
+using XamarinFormsSamples.Video;
 
 namespace XamarinFormsSamples
 {
@@ -20,6 +21,11 @@ namespace XamarinFormsSamples
 		private void GesturePatternSampleButton_OnClicked(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new GesturePatternSample());
+		}
+
+		private void VideoPlayerSample_OnClicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new VideoPlayerSample());
 		}
 	}
 }
