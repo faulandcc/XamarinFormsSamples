@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using GalaSoft.MvvmLight.Ioc;
 using MR.Gestures;
 using Xamarin.Forms;
-using XamarinFormsSamples.Services;
 using Grid = Xamarin.Forms.Grid;
 
 namespace XamarinFormsSamples.GesturePattern
 {
+	public delegate void GesturePatternCompletedEventHandler(object sender, GesturePatternCompletedEventArgs e);
+
 	/// <summary>
-	/// https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/pan/
-	/// http://stackoverflow.com/questions/37516830/how-to-create-pin-pattern-password-using-xamarin-form
+	/// The gesture pattern view. 
 	/// </summary>
 	public class GesturePatternView : MR.Gestures.ContentView
 	{
@@ -149,6 +147,24 @@ namespace XamarinFormsSamples.GesturePattern
 		#endregion
 
 
+		#region events
+
+		/// <summary>
+		/// Raised as soon as the finger was released.
+		/// </summary>
+		public event GesturePatternCompletedEventHandler GesturePatternCompleted;
+		protected virtual void OnGesturePatternCompleted(string gesturePatternValue)
+		{
+			this.GesturePatternValue = gesturePatternValue;
+			this.GesturePatternCompleted?.Invoke(this, new GesturePatternCompletedEventArgs()
+			{
+				GesturePatternValue = this.GesturePatternValue
+			});
+		}
+
+		#endregion
+
+
 		#region ctor
 
 		/// <summary>
@@ -270,6 +286,9 @@ namespace XamarinFormsSamples.GesturePattern
 			Debug.WriteLine($"Panned: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
 			Debug.WriteLine($"PATTERN VALUE = {_gestureValueBuilder}");
 
+			// Gesture pattern completed.
+			this.OnGesturePatternCompleted(_gestureValueBuilder.ToString());
+
 			// Reset the touchpoints.
 			foreach (var gestureTouchPoint in _touchPoints)
 			{
@@ -281,5 +300,11 @@ namespace XamarinFormsSamples.GesturePattern
 		}
 
 		#endregion
+	}
+
+
+	public class GesturePatternCompletedEventArgs : EventArgs
+	{
+		public string GesturePatternValue { get; set; }
 	}
 }

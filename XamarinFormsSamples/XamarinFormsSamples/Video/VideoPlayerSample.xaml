@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:XamarinFormsSamples.Video;assembly=XamarinFormsSamples"
+             x:Class="XamarinFormsSamples.Video.VideoPlayerSample">
+  <!--You can also use Bindings for the UriSource-->
+  <!--To make the video work on iOS you have to add the NSAppTransportSecurity section (see iOS sample) to your Info.plist (see https://developer.xamarin.com/guides/ios/platform_features/introduction_to_ios9/ats/ for further info)-->
+  <video:VideoView WidthRequest="500" HeightRequest="500" x:Name="VideoView" UriSource="http://www.html5videoplayer.net/videos/toystory.mp4"/>
+</ContentPage>

@@ -2,6 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gesturePattern="clr-namespace:XamarinFormsSamples.GesturePattern;assembly=XamarinFormsSamples"
              x:Class="XamarinFormsSamples.GesturePattern.GesturePatternSample">
-  <gesturePattern:GesturePatternView x:Name="MyGesturePatternView" HeightRequest="500" WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Blue"
-                                     TouchPointText="&#xf10c;" TouchPointHighlightText="&#xf111;" TouchPointTextColor="White" TouchPointHighlightTextColor="Yellow"/>
+  <Grid BackgroundColor="Black">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Label Grid.Row="0" Text="{Binding GestureValue}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White"/>
+    <gesturePattern:GesturePatternView x:Name="MyGesturePatternView" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Black"
+                                       GesturePatternValue="{Binding GestureValue, Mode=TwoWay}" TouchPointText="&#xf10c;" TouchPointHighlightText="&#xf111;" TouchPointTextColor="White" TouchPointHighlightTextColor="Yellow"/>
+  </Grid>
 </ContentPage>
