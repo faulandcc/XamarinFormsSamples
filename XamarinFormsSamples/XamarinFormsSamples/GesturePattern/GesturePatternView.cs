@@ -172,11 +172,13 @@ namespace XamarinFormsSamples.GesturePattern
 		/// </summary>
 		public GesturePatternView()
 		{
+		    //this.LongPressing += OnLongPressing;
+		    //this.Tapping += OnTapping;
 			this.Panning += OnPanning;
 			this.Panned += OnPanned;
 		}
 
-		#endregion
+	    #endregion
 
 
 		#region public methods
@@ -221,15 +223,16 @@ namespace XamarinFormsSamples.GesturePattern
 				{
 					var touchPoint = new GestureTouchPoint()
 					{
-						Text = this.TouchPointText,
+						//Text = this.TouchPointText,
 						HighlightText = this.TouchPointHighlightText,
-						FontSize = 30,
-						FontFamily = string.IsNullOrEmpty(this.TouchPointFontFamily) ? "FontAwesome" : this.TouchPointFontFamily,
+						//FontSize = 30,
+						//FontFamily = string.IsNullOrEmpty(this.TouchPointFontFamily) ? "FontAwesome" : this.TouchPointFontFamily,
 						InputTransparent = true,
-						TextColor = this.TouchPointTextColor,
+						//TextColor = this.TouchPointTextColor,
+						BackgroundColor = this.TouchPointTextColor,
 						HighlightTextColor = this.TouchPointHighlightTextColor,
-						HorizontalTextAlignment = TextAlignment.Center,
-						VerticalTextAlignment = TextAlignment.Center,
+                        //HorizontalTextAlignment = TextAlignment.Center,
+						//VerticalTextAlignment = TextAlignment.Center,
 						HorizontalOptions = LayoutOptions.FillAndExpand,
 						VerticalOptions = LayoutOptions.FillAndExpand
 					};
@@ -263,8 +266,42 @@ namespace XamarinFormsSamples.GesturePattern
 			}
 			return false;
 		}
+        
+	    private void OnLongPressing(object sender, LongPressEventArgs e)
+	    {
+	        Debug.WriteLine($"OnLongPressing: {e.Touches.FirstOrDefault()} {e.NumberOfTouches} {e.Center} {e.Sender}");
 
-		private void OnPanning(object sender, PanEventArgs e)
+	        var location = e.Touches.First();
+	        foreach (var gestureTouchPoint in _touchPoints)
+	        {
+	            if (TouchedTouchPoint(location, gestureTouchPoint) && gestureTouchPoint.Value != _lastTouchPointValue)
+	            {
+	                gestureTouchPoint.Touch();
+	                _gestureValueBuilder.Append(gestureTouchPoint.Value);
+	                _lastTouchPointValue = gestureTouchPoint.Value;
+	                break;
+	            }
+	        }
+        }
+
+        private void OnTapping(object sender, TapEventArgs e)
+	    {
+	        Debug.WriteLine($"Tapping: {e.Touches.FirstOrDefault()} {e.NumberOfTouches} {e.Center} {e.Sender}");
+
+	        var location = e.Touches.First();
+	        foreach (var gestureTouchPoint in _touchPoints)
+	        {
+	            if (TouchedTouchPoint(location, gestureTouchPoint) && gestureTouchPoint.Value != _lastTouchPointValue)
+	            {
+	                gestureTouchPoint.Touch();
+	                _gestureValueBuilder.Append(gestureTouchPoint.Value);
+	                _lastTouchPointValue = gestureTouchPoint.Value;
+	                break;
+	            }
+	        }
+        }
+
+        private void OnPanning(object sender, PanEventArgs e)
 		{
 			Debug.WriteLine($"Panning: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
 			var location = e.Touches.First();
@@ -273,7 +310,7 @@ namespace XamarinFormsSamples.GesturePattern
 			{
 				if (TouchedTouchPoint(location, gestureTouchPoint) && gestureTouchPoint.Value != _lastTouchPointValue)
 				{
-					gestureTouchPoint.Touch();
+                    gestureTouchPoint.Touch();
 					_gestureValueBuilder.Append(gestureTouchPoint.Value);
 					_lastTouchPointValue = gestureTouchPoint.Value;
 					break;
@@ -283,7 +320,7 @@ namespace XamarinFormsSamples.GesturePattern
 
 		private void OnPanned(object sender, PanEventArgs e)
 		{
-			Debug.WriteLine($"Panned: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
+		    Debug.WriteLine($"Panned: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
 			Debug.WriteLine($"PATTERN VALUE = {_gestureValueBuilder}");
 
 			// Gesture pattern completed.

@@ -2,7 +2,7 @@
 
 namespace XamarinFormsSamples.GesturePattern
 {
-	public class GestureTouchPoint : Label
+	public class GestureTouchPoint : ContentView
 	{
 		private bool _setDefaults = true;
 
@@ -30,12 +30,14 @@ namespace XamarinFormsSamples.GesturePattern
 		{
 			if (_setDefaults)
 			{
-				this.DefaultTextColor = this.TextColor;
-				this.DefaultText = this.Text;
+				this.DefaultTextColor = this.BackgroundColor;
+				//this.DefaultTextColor = this.TextColor;
+				//this.DefaultText = this.Text;
 				_setDefaults = false;
 			}
-			this.TextColor = this.HighlightTextColor;
-			this.Text = this.HighlightText;
+			this.BackgroundColor = this.HighlightTextColor;
+			//this.TextColor = this.HighlightTextColor;
+			//this.Text = this.HighlightText;
 			this.IsTouched = true;
 		}
 
@@ -43,8 +45,9 @@ namespace XamarinFormsSamples.GesturePattern
 		{
 			if (this.IsTouched)
 			{
-				this.TextColor = this.DefaultTextColor;
-				this.Text = this.DefaultText;
+				this.BackgroundColor = this.DefaultTextColor;
+				//this.TextColor = this.DefaultTextColor;
+				//this.Text = this.DefaultText;
 				this.IsTouched = false;
 			}
 		}
