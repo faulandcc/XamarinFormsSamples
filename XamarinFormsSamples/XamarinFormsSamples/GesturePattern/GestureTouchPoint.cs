@@ -30,12 +30,12 @@ namespace XamarinFormsSamples.GesturePattern
 		{
 			if (_setDefaults)
 			{
-				this.DefaultTextColor = this.BackgroundColor;
+				//this.DefaultTextColor = this.BackgroundColor;
 				//this.DefaultTextColor = this.TextColor;
 				//this.DefaultText = this.Text;
 				_setDefaults = false;
 			}
-			this.BackgroundColor = this.HighlightTextColor;
+			//this.BackgroundColor = this.HighlightTextColor;
 			//this.TextColor = this.HighlightTextColor;
 			//this.Text = this.HighlightText;
 			this.IsTouched = true;
@@ -45,7 +45,7 @@ namespace XamarinFormsSamples.GesturePattern
 		{
 			if (this.IsTouched)
 			{
-				this.BackgroundColor = this.DefaultTextColor;
+				//this.BackgroundColor = this.DefaultTextColor;
 				//this.TextColor = this.DefaultTextColor;
 				//this.Text = this.DefaultText;
 				this.IsTouched = false;

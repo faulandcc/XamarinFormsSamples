@@ -4,7 +4,7 @@ using Xamarin.Forms.Platform.UWP;
 using XamarinFormsSamples.GesturePattern;
 using XamarinFormsSamples.UWP.Controls;
 
-[assembly: ExportRenderer(typeof(GestureTouchPoint), typeof(GestureTouchPointRenderer))]
+//[assembly: ExportRenderer(typeof(GestureTouchPoint), typeof(GestureTouchPointRenderer))]
 namespace XamarinFormsSamples.UWP.Controls
 {
 
