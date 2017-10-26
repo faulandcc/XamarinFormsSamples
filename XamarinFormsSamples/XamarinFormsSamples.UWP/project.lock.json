@@ -335,91 +335,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/osx/native/libSkiaSharp.dylib": {
-            "assetType": "native",
-            "rid": "osx"
-          },
-          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {
-            "assetType": "native",
-            "rid": "win10-arm"
-          },
-          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {
-            "assetType": "native",
-            "rid": "win10-arm"
-          },
-          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win10-arm"
-          },
-          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {
-            "assetType": "native",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {
-            "assetType": "native",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {
-            "assetType": "native",
-            "rid": "win10-x86"
-          },
-          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {
-            "assetType": "native",
-            "rid": "win10-x86"
-          },
-          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win10-x86"
-          },
-          "runtimes/win7-x64/native/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x86/native/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win7-x86"
-          }
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        }
-      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -2250,17 +2165,6 @@
           }
         }
       },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        }
-      },
       "Xamarin.Forms/2.4.0.18342": {
         "type": "package",
         "compile": {
@@ -2870,46 +2774,6 @@
         "type": "package",
         "native": {
           "runtimes/win8-arm/native/clrcompression.dll": {}
-        }
-      },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -4596,17 +4460,6 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        }
-      },
       "Xamarin.Forms/2.4.0.18342": {
         "type": "package",
         "compile": {
@@ -5252,46 +5105,6 @@
         },
         "native": {
           "runtimes/win8-arm-aot/native/_._": {}
-        }
-      },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -6978,17 +6791,6 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        }
-      },
       "Xamarin.Forms/2.4.0.18342": {
         "type": "package",
         "compile": {
@@ -7607,46 +7409,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
-        }
-      },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -9331,17 +9093,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
         }
       },
       "Xamarin.Forms/2.4.0.18342": {
@@ -10000,46 +9751,6 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        }
-      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -11724,17 +11435,6 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        }
-      },
       "Xamarin.Forms/2.4.0.18342": {
         "type": "package",
         "compile": {
@@ -12353,46 +12053,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
-        }
-      },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -14079,17 +13739,6 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        }
-      },
       "Xamarin.Forms/2.4.0.18342": {
         "type": "package",
         "compile": {
@@ -14744,46 +14393,6 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
-        }
-      },
-      "SkiaSharp/1.59.1": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.dll": {}
-        },
-        "native": {
-          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {},
-          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {},
-          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {}
-        }
-      },
-      "SkiaSharp.Views/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
-        }
-      },
-      "SkiaSharp.Views.Forms/1.59.1.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "SkiaSharp.Views": "1.59.1.1",
-          "Xamarin.Forms": "2.3.0"
-        },
-        "compile": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -16468,17 +16077,6 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.Plugins.Vibrate/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
-        },
-        "runtime": {
-          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
-          "lib/UAP10/Plugin.Vibrate.dll": {}
         }
       },
       "Xamarin.Forms/2.4.0.18342": {
@@ -17885,78 +17483,6 @@
         "runtime.win8-arm.runtime.native.system.io.compression.4.0.1.nupkg.sha512",
         "runtime.win8-arm.runtime.native.system.io.compression.nuspec",
         "runtimes/win8-arm/native/clrcompression.dll"
-      ]
-    },
-    "SkiaSharp/1.59.1": {
-      "sha512": "Le+YqP0aWwJ5ImHikWiLWOWjdH8oOV6F2D7fknzKp9ArzDIrtPASeiHpI1RgqQEK/GGvR56B2l5belsDzwK7uQ==",
-      "type": "package",
-      "path": "skiasharp/1.59.1",
-      "files": [
-        "build/net45/SkiaSharp.dll.config",
-        "build/net45/SkiaSharp.targets",
-        "lib/MonoAndroid/SkiaSharp.dll",
-        "lib/MonoAndroid/SkiaSharp.xml",
-        "lib/XamarinMac/SkiaSharp.dll",
-        "lib/XamarinMac/SkiaSharp.xml",
-        "lib/XamariniOS/SkiaSharp.dll",
-        "lib/XamariniOS/SkiaSharp.xml",
-        "lib/XamarintvOS/SkiaSharp.dll",
-        "lib/XamarintvOS/SkiaSharp.xml",
-        "lib/net45/SkiaSharp.dll",
-        "lib/net45/SkiaSharp.dll.config",
-        "lib/net45/SkiaSharp.xml",
-        "lib/netstandard1.3/SkiaSharp.dll",
-        "lib/netstandard1.3/SkiaSharp.xml",
-        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.dll",
-        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.xml",
-        "lib/uap10.0/SkiaSharp.dll",
-        "lib/uap10.0/SkiaSharp.xml",
-        "runtimes/osx/native/libSkiaSharp.dylib",
-        "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
-        "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
-        "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "runtimes/win7-x64/native/libSkiaSharp.dll",
-        "runtimes/win7-x86/native/libSkiaSharp.dll",
-        "skiasharp.1.59.1.nupkg.sha512",
-        "skiasharp.nuspec",
-        "xamarin.interactive/SkiaSharp.Workbooks.dll"
-      ]
-    },
-    "SkiaSharp.Views/1.59.1.1": {
-      "sha512": "1MQmOh3OjdrCD87Ehdn986RoD43WEe8D9zzncCotuAckYHB++JmDv1poOhaiWtoYqCLXU6Vk5IcQR6+EgZ0ofQ==",
-      "type": "package",
-      "path": "skiasharp.views/1.59.1.1",
-      "files": [
-        "lib/MonoAndroid/SkiaSharp.Views.Android.dll",
-        "lib/XamarinMac/SkiaSharp.Views.Mac.dll",
-        "lib/XamariniOS/SkiaSharp.Views.iOS.dll",
-        "lib/XamarintvOS/SkiaSharp.Views.tvOS.dll",
-        "lib/net45/SkiaSharp.Views.Desktop.dll",
-        "lib/net45/SkiaSharp.Views.WPF.dll",
-        "lib/uap10.0/SkiaSharp.Views.UWP.dll",
-        "skiasharp.views.1.59.1.1.nupkg.sha512",
-        "skiasharp.views.nuspec"
-      ]
-    },
-    "SkiaSharp.Views.Forms/1.59.1.1": {
-      "sha512": "9SvUAas8A7Tj4NuvFX3Z+tCQFbC+XSayRJPI3zxrzfc8g0WTc2S0yCj8+wm/eSTB5fHmFguu9FOoiyYMj53fiw==",
-      "type": "package",
-      "path": "skiasharp.views.forms/1.59.1.1",
-      "files": [
-        "lib/MonoAndroid/SkiaSharp.Views.Forms.dll",
-        "lib/XamarinMac/SkiaSharp.Views.Forms.dll",
-        "lib/XamariniOS/SkiaSharp.Views.Forms.dll",
-        "lib/netstandard1.3/SkiaSharp.Views.Forms.dll",
-        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.Views.Forms.dll",
-        "lib/uap10.0/SkiaSharp.Views.Forms.dll",
-        "skiasharp.views.forms.1.59.1.1.nupkg.sha512",
-        "skiasharp.views.forms.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -22861,40 +22387,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Xam.Plugins.Vibrate/3.0.1": {
-      "sha512": "gJBkGl74rl+Y7j2gdESjdBYT7wiww3BdHPGVJVcNyjdOG9LDJ1dqbKz1RDJFVfLXlKUg7XPHPpiY6/kh5LxNmA==",
-      "type": "package",
-      "path": "xam.plugins.vibrate/3.0.1",
-      "files": [
-        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.dll",
-        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.pdb",
-        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.xml",
-        "lib/MonoAndroid10/Plugin.Vibrate.dll",
-        "lib/MonoAndroid10/Plugin.Vibrate.pdb",
-        "lib/MonoAndroid10/Plugin.Vibrate.xml",
-        "lib/UAP10/Plugin.Vibrate.Abstractions.dll",
-        "lib/UAP10/Plugin.Vibrate.Abstractions.pdb",
-        "lib/UAP10/Plugin.Vibrate.Abstractions.xml",
-        "lib/UAP10/Plugin.Vibrate.XML",
-        "lib/UAP10/Plugin.Vibrate.dll",
-        "lib/UAP10/Plugin.Vibrate.pdb",
-        "lib/UAP10/Plugin.Vibrate.pri",
-        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.pdb",
-        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.xml",
-        "lib/Xamarin.iOS10/Plugin.Vibrate.dll",
-        "lib/Xamarin.iOS10/Plugin.Vibrate.xml",
-        "lib/netstandard/Plugin.Vibrate.Abstractions.dll",
-        "lib/netstandard/Plugin.Vibrate.Abstractions.pdb",
-        "lib/netstandard/Plugin.Vibrate.Abstractions.xml",
-        "lib/netstandard/Plugin.Vibrate.deps.json",
-        "lib/netstandard/Plugin.Vibrate.dll",
-        "lib/netstandard/Plugin.Vibrate.pdb",
-        "lib/netstandard/Plugin.Vibrate.xml",
-        "xam.plugins.vibrate.3.0.1.nupkg.sha512",
-        "xam.plugins.vibrate.nuspec"
-      ]
-    },
     "Xamarin.Forms/2.4.0.18342": {
       "sha512": "L06B17FaKwsMfMrbAPvMeQaPj6iJ61gcc4LWUBpCsmnxVmTnbwtBN5CMKBLUWseFWKd0KRQMu2EqObxK8oMzpQ==",
       "type": "package",
@@ -23089,8 +22581,6 @@
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "MvvmLightLibs >= 5.3.0",
-      "SkiaSharp.Views.Forms >= 1.59.1.1",
-      "Xam.Plugins.Vibrate >= 3.0.1",
       "Xamarin.Forms >= 2.4.0.18342"
     ],
     "UAP,Version=v10.0.10586": []
@@ -23129,8 +22619,6 @@
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "MvvmLightLibs": "5.3.0",
-      "SkiaSharp.Views.Forms": "1.59.1.1",
-      "Xam.Plugins.Vibrate": "3.0.1",
       "Xamarin.Forms": "2.4.0.18342"
     },
     "frameworks": {

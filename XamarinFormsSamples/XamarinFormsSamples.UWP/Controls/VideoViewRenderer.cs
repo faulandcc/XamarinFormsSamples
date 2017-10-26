@@ -4,7 +4,6 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
-using XamarinFormsSamples.GesturePattern;
 using XamarinFormsSamples.UWP.Controls;
 using XamarinFormsSamples.Video;
 

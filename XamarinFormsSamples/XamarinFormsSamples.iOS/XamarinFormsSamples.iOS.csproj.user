@@ -10,16 +10,16 @@
 		&lt;key&gt;architecture&lt;/key&gt;
 		&lt;string&gt;ARMv6, ARMv7, ARMv7s, ARM64&lt;/string&gt;
 		&lt;key&gt;model&lt;/key&gt;
-		&lt;string&gt;iPad5,3&lt;/string&gt;
+		&lt;string&gt;iPhone7,2&lt;/string&gt;
 		&lt;key&gt;os-version&lt;/key&gt;
-		&lt;string&gt;9.3.5&lt;/string&gt;
+		&lt;string&gt;10.3.3&lt;/string&gt;
 		&lt;key&gt;os&lt;/key&gt;
 		&lt;string&gt;iOS&lt;/string&gt;
 	&lt;/dict&gt;
 &lt;/dict&gt;
 &lt;/plist&gt;
 </TargetiOSDevice>
-    <SelectedDevice>Device</SelectedDevice>
+    <SelectedDevice>fauland.cc</SelectedDevice>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
