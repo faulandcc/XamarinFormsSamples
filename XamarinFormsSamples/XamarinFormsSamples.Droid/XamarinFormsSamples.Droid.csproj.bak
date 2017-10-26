@@ -76,18 +76,6 @@
       <HintPath>..\..\packages\MR.Gestures.1.4.2.2\lib\MonoAndroid10\MR.Gestures.Android.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
-    <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.59.1\lib\MonoAndroid\SkiaSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SkiaSharp.Views.Android, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.1.59.1.1\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.1.1\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -168,7 +156,6 @@
   <ItemGroup>
     <ProjectReference Include="..\XamarinFormsSamples\XamarinFormsSamples.csproj">
       <Name>XamarinFormsSamples</Name>
-      <Project>{C61755B9-F3C9-45AF-AC33-D642813A12C4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

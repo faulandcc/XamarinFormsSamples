@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using MR.Gestures;
+using SkiaSharp;
+using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 using Grid = Xamarin.Forms.Grid;
 
@@ -19,14 +21,15 @@ namespace XamarinFormsSamples.GesturePattern
 		private readonly List<GestureTouchPoint> _touchPoints = new List<GestureTouchPoint>();
 		private readonly StringBuilder _gestureValueBuilder = new StringBuilder();
 		private string _lastTouchPointValue;
+	    private SKCanvasView _canvas;
 
 
-		#region bindable properties
+        #region bindable properties
 
-		/// <summary>
-		/// The number of horizontal touch points.
-		/// </summary>
-		public static readonly BindableProperty HorizontalTouchPointsProperty = BindableProperty.Create<GesturePatternView, int>(x => x.HorizontalTouchPoints, 3, BindingMode.OneWay);
+        /// <summary>
+        /// The number of horizontal touch points.
+        /// </summary>
+        public static readonly BindableProperty HorizontalTouchPointsProperty = BindableProperty.Create<GesturePatternView, int>(x => x.HorizontalTouchPoints, 3, BindingMode.OneWay);
 
 		/// <summary>
 		/// The number of vertical touch points.
@@ -176,7 +179,7 @@ namespace XamarinFormsSamples.GesturePattern
 			this.Panned += OnPanned;
 		}
 
-		#endregion
+	    #endregion
 
 
 		#region public methods
@@ -203,7 +206,7 @@ namespace XamarinFormsSamples.GesturePattern
 				grid.RowDefinitions.Add(new RowDefinition());
 				if (vIndex < (this.VerticalTouchPoints - 1))
 				{
-					grid.RowDefinitions.Add(new RowDefinition() { Height = 20 });
+					grid.RowDefinitions.Add(new RowDefinition() { Height = 40 });
 				}
 			}
 			for (int hIndex = 0; hIndex < this.HorizontalTouchPoints; hIndex++)
@@ -211,7 +214,7 @@ namespace XamarinFormsSamples.GesturePattern
 				grid.ColumnDefinitions.Add(new ColumnDefinition());
 				if (hIndex < (this.HorizontalTouchPoints - 1))
 				{
-					grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 20 });
+					grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 40 });
 				}
 			}
 
@@ -221,17 +224,20 @@ namespace XamarinFormsSamples.GesturePattern
 				{
 					var touchPoint = new GestureTouchPoint()
 					{
-						Text = this.TouchPointText,
+						//Text = this.TouchPointText,
 						HighlightText = this.TouchPointHighlightText,
-						FontSize = 30,
-						FontFamily = string.IsNullOrEmpty(this.TouchPointFontFamily) ? "FontAwesome" : this.TouchPointFontFamily,
+						//FontSize = 30,
+						//FontFamily = string.IsNullOrEmpty(this.TouchPointFontFamily) ? "FontAwesome" : this.TouchPointFontFamily,
 						InputTransparent = true,
-						TextColor = this.TouchPointTextColor,
+						//TextColor = this.TouchPointTextColor,
+						//BackgroundColor = this.TouchPointTextColor,
 						HighlightTextColor = this.TouchPointHighlightTextColor,
-						HorizontalTextAlignment = TextAlignment.Center,
-						VerticalTextAlignment = TextAlignment.Center,
-						HorizontalOptions = LayoutOptions.FillAndExpand,
-						VerticalOptions = LayoutOptions.FillAndExpand
+                        //HorizontalTextAlignment = TextAlignment.Center,
+						//VerticalTextAlignment = TextAlignment.Center,
+                        HeightRequest = 40,
+                        WidthRequest = 40,
+						HorizontalOptions = LayoutOptions.Center,
+						VerticalOptions = LayoutOptions.Center
 					};
 
 					var tpValue = _touchPoints.Count + 1;
@@ -244,7 +250,76 @@ namespace XamarinFormsSamples.GesturePattern
 					_touchPoints.Add(touchPoint);
 				}
 			}
-			this.Content = grid;
+
+		    _canvas = new SKCanvasView();
+		    _canvas.IgnorePixelScaling = true;
+            _canvas.EnableTouchEvents = false;
+		    _canvas.PaintSurface += (sender, args) =>
+		    {
+		        var canvas = args.Surface.Canvas;
+                canvas.Clear();
+                
+                SKPaint skPaintTouchPoint = new SKPaint
+                {
+                    Style = SKPaintStyle.StrokeAndFill,
+                    Color = this.TouchPointTextColor.ToSKColor(),
+                    StrokeWidth = 3
+                };
+                SKPaint skPaintTouchPointTouched = new SKPaint
+                {
+                    Style = SKPaintStyle.Stroke,
+                    Color = this.TouchPointHighlightTextColor.ToSKColor(),
+                    StrokeWidth = 3
+                };
+                SKPaint skPaint = new SKPaint
+                {
+                    Style = SKPaintStyle.Stroke,
+                    Color = SKColors.Green,
+                    StrokeWidth = 5
+                };
+
+                // Paint the touchpoints.
+                foreach (var touchPoint in _touchPoints)
+		        {
+		            var p = this.GetMidOfTouchPoint(touchPoint);
+                    canvas.DrawCircle((float)p.X, (float)p.Y, 10, skPaintTouchPoint);
+		        }
+
+                if (_fixedPoints.Count == 0)
+                {
+                    return;
+                }
+
+                // Paint the fixed points.
+                canvas.DrawCircle((float)_fixedPoints.First().X, (float)_fixedPoints.First().Y, 50, skPaintTouchPointTouched);
+                for (int i = 1; i < _fixedPoints.Count; i++)
+		        {
+                    float xStart = (float)_fixedPoints[i-1].X;
+                    float yStart = (float)_fixedPoints[i - 1].Y;
+                    float xEnd = (float)_fixedPoints[i].X;
+                    float yEnd = (float)_fixedPoints[i].Y;
+                    canvas.DrawLine(xStart, yStart, xEnd, yEnd, skPaint);
+                    canvas.DrawCircle((float)_fixedPoints[i].X, (float)_fixedPoints[i].Y, 50, skPaintTouchPointTouched);
+                }
+                // Paint the pending point.
+                if (_pendingPoint != Point.Zero)
+		        {
+		            skPaint.Color = SKColors.Red;
+                    float xStart = (float)_fixedPoints.Last().X;
+                    float yStart = (float)_fixedPoints.Last().Y;
+                    float xEnd = (float)_pendingPoint.X;
+                    float yEnd = (float)_pendingPoint.Y;
+                    canvas.DrawLine(xStart, yStart, xEnd, yEnd, skPaint);
+                }
+            };
+            _canvas.SetValue(Grid.RowProperty, 0);
+            _canvas.SetValue(Grid.RowSpanProperty, grid.RowDefinitions.Count);
+            _canvas.SetValue(Grid.ColumnProperty, 0);
+            _canvas.SetValue(Grid.ColumnSpanProperty, grid.ColumnDefinitions.Count);
+            
+            grid.Children.Add(_canvas);
+
+            this.Content = grid;
 		}
 
 		#endregion
@@ -264,26 +339,42 @@ namespace XamarinFormsSamples.GesturePattern
 			return false;
 		}
 
-		private void OnPanning(object sender, PanEventArgs e)
+        private List<Point> _fixedPoints = new List<Point>();
+	    private Point _pendingPoint = Point.Zero;
+
+        private void OnPanning(object sender, PanEventArgs e)
 		{
 			Debug.WriteLine($"Panning: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
 			var location = e.Touches.First();
 
-			foreach (var gestureTouchPoint in _touchPoints)
+		    bool hasPendingPoint = true;
+		    foreach (var gestureTouchPoint in _touchPoints)
 			{
 				if (TouchedTouchPoint(location, gestureTouchPoint) && gestureTouchPoint.Value != _lastTouchPointValue)
 				{
-					gestureTouchPoint.Touch();
+                    gestureTouchPoint.Touch();
 					_gestureValueBuilder.Append(gestureTouchPoint.Value);
-					_lastTouchPointValue = gestureTouchPoint.Value;
+                    _lastTouchPointValue = gestureTouchPoint.Value;
+                    _fixedPoints.Add(this.GetMidOfTouchPoint(gestureTouchPoint));
+                    hasPendingPoint = false;
 					break;
 				}
 			}
-		}
+		    if (hasPendingPoint)
+		    {
+		        _pendingPoint.X = location.X;
+		        _pendingPoint.Y = location.Y;
+		    }
+		    else
+		    {
+		        _pendingPoint = Point.Zero;
+		    }
+            _canvas?.InvalidateSurface();
+        }
 
-		private void OnPanned(object sender, PanEventArgs e)
+	    private void OnPanned(object sender, PanEventArgs e)
 		{
-			Debug.WriteLine($"Panned: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
+		    Debug.WriteLine($"Panned: {e.Touches.FirstOrDefault()} {e.DeltaDistance} {e.TotalDistance} {e.NumberOfTouches} {e.Center} {e.Sender}");
 			Debug.WriteLine($"PATTERN VALUE = {_gestureValueBuilder}");
 
 			// Gesture pattern completed.
@@ -297,10 +388,21 @@ namespace XamarinFormsSamples.GesturePattern
 			// Clear the recognized gesture values.
 			_gestureValueBuilder.Clear();
 			_lastTouchPointValue = null;
-		}
 
-		#endregion
-	}
+            _pendingPoint = Point.Zero;
+            _canvas?.InvalidateSurface();
+        }
+
+        private Point GetMidOfTouchPoint(GestureTouchPoint touchPoint)
+        {
+            double midX = touchPoint.X + (touchPoint.Width / 2);
+            double midY = touchPoint.Y + (touchPoint.Height / 2);
+
+            return new Point(midX, midY);
+        }
+
+        #endregion
+    }
 
 
 	public class GesturePatternCompletedEventArgs : EventArgs
