@@ -26,6 +26,8 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchExtraArgs></MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -114,13 +116,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
-    <None Include="libGVRView_x86.a" />
     <None Include="packages.config" />
     <BundleResource Include="Resources\Fonts\fontawesome-webfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinFormsSamples\XamarinFormsSamples.csproj">
       <Name>XamarinFormsSamples</Name>
+      <Project>{C61755B9-F3C9-45AF-AC33-D642813A12C4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GVRBindingsLibrary\GVRBindingsLibrary.csproj">
+      <Project>{35753218-E4C1-49A9-B046-F6E853682C24}</Project>
+      <Name>GVRBindingsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -186,13 +192,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <NativeReference Include="Native References/libGVRView_x86.a">
-      <Kind>Static</Kind>
-      <ForceLoad>False</ForceLoad>
-      <SmartLink>False</SmartLink>
-    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

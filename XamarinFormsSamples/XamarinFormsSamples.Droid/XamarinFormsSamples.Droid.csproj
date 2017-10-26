@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -158,6 +158,7 @@
   <ItemGroup>
     <ProjectReference Include="..\XamarinFormsSamples\XamarinFormsSamples.csproj">
       <Name>XamarinFormsSamples</Name>
+      <Project>{C61755B9-F3C9-45AF-AC33-D642813A12C4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
