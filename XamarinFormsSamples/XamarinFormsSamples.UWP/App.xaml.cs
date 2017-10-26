@@ -64,18 +64,7 @@ namespace XamarinFormsSamples.UWP
 
 				rootFrame.NavigationFailed += OnNavigationFailed;
 
-				var otherAssemblies = new[] {
-					typeof(MR.Gestures.ContentPage).GetTypeInfo().Assembly,
-					typeof(MR.Gestures.UWP.Renderers.PageRenderer).GetTypeInfo().Assembly,
-				};
-
-				Xamarin.Forms.Forms.Init(e, otherAssemblies);
-
-				// TODO:Replace this licence key by your own MR GESTURES licence key.
-				// This licence key will only work, if your app is called "GestureSample".
-				// We use the Test-LicenceKey from the MR GESTURES SAMPLE APP (https://github.com/MichaelRumpler/GestureSample).
-				// Details, see: http://www.mrgestures.com/
-				MR.Gestures.UWP.Settings.LicenseKey = "ALZ9-BPVU-XQ35-CEBG-5ZRR-URJQ-ED5U-TSY8-6THP-3GVU-JW8Z-RZGE-CQW6";
+				Xamarin.Forms.Forms.Init(e);
 
 				if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
 				{

@@ -69,13 +69,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Android" />
-    <Reference Include="MR.Gestures, Version=1.4.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MR.Gestures.1.4.2.2\lib\MonoAndroid10\MR.Gestures.dll</HintPath>
-    </Reference>
-    <Reference Include="MR.Gestures.Android, Version=1.4.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MR.Gestures.1.4.2.2\lib\MonoAndroid10\MR.Gestures.Android.dll</HintPath>
-    </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="Plugin.Vibrate, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.3.0.1\lib\MonoAndroid10\Plugin.Vibrate.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Vibrate.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Vibrate.3.0.1\lib\MonoAndroid10\Plugin.Vibrate.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SkiaSharp.1.59.1\lib\MonoAndroid\SkiaSharp.dll</HintPath>
       <Private>True</Private>

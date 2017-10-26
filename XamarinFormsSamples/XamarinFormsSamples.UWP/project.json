@@ -1,13 +1,13 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "MR.Gestures": "1.4.2.2",
     "MvvmLightLibs": "5.3.0",
     "SkiaSharp.Views.Forms": "1.59.1.1",
+    "Xam.Plugins.Vibrate": "3.0.1",
     "Xamarin.Forms": "2.3.2.127"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10586": {}
   },
   "runtimes": {
     "win10-arm": {},

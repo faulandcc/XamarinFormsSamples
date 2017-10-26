@@ -9,6 +9,6 @@
     </Grid.RowDefinitions>
     <Label Grid.Row="0" Text="{Binding GestureValue}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White"/>
     <gesturePattern:GesturePatternView x:Name="MyGesturePatternView" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Black"
-                                       GesturePatternValue="{Binding GestureValue, Mode=TwoWay}" TouchPointText="&#xf10c;" TouchPointHighlightText="&#xf111;" TouchPointTextColor="White" TouchPointHighlightTextColor="Yellow"/>
+                                       GesturePatternValue="{Binding GestureValue, Mode=TwoWay}" TouchPointColor="White" TouchPointHighlightColor="Yellow" LineDrawingColor="Gray" LineDrawnColor="Red"/>
   </Grid>
 </ContentPage>

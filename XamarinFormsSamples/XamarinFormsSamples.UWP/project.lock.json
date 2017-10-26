@@ -293,20 +293,6 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        }
-      },
       "MvvmLightLibs/5.3.0": {
         "type": "package",
         "dependencies": {
@@ -2264,6 +2250,17 @@
           }
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -2524,20 +2521,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -4612,6 +4595,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -4873,20 +4867,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -6996,6 +6976,17 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -7259,20 +7250,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -9353,6 +9330,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -9617,20 +9605,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -11746,6 +11720,17 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -12009,20 +11994,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -14103,6 +14074,17 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -14367,20 +14349,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MR.Gestures/1.4.2.2": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "2.0.0.6482"
-        },
-        "compile": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/MR.Gestures.UWP.dll": {},
-          "lib/uap10.0/MR.Gestures.dll": {}
         }
       },
       "MvvmLightLibs/5.3.0": {
@@ -16496,6 +16464,17 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugins.Vibrate/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Vibrate.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Vibrate.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.2.127": {
         "type": "package",
         "compile": {
@@ -16832,45 +16811,6 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
-      ]
-    },
-    "MR.Gestures/1.4.2.2": {
-      "sha512": "RLIWF9AZu2YwZRvSfIylDBpZX23ff92uaqf/rRoIaL7cTGQvJCw9RF4i2KPS+O8p2I4oxlq53f8P0aqAxj42Nw==",
-      "type": "package",
-      "path": "mr.gestures/1.4.2.2",
-      "files": [
-        "lib/MonoAndroid10/MR.Gestures.Android.XML",
-        "lib/MonoAndroid10/MR.Gestures.Android.dll",
-        "lib/MonoAndroid10/MR.Gestures.XML",
-        "lib/MonoAndroid10/MR.Gestures.dll",
-        "lib/WP80/MR.Gestures.WinPhone.XML",
-        "lib/WP80/MR.Gestures.WinPhone.dll",
-        "lib/WP80/MR.Gestures.XML",
-        "lib/WP80/MR.Gestures.dll",
-        "lib/Xamarin.iOS10/MR.Gestures.XML",
-        "lib/Xamarin.iOS10/MR.Gestures.dll",
-        "lib/Xamarin.iOS10/MR.Gestures.iOS.XML",
-        "lib/Xamarin.iOS10/MR.Gestures.iOS.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/MR.Gestures.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/MR.Gestures.dll",
-        "lib/uap10.0/MR.Gestures.UWP.XML",
-        "lib/uap10.0/MR.Gestures.UWP.dll",
-        "lib/uap10.0/MR.Gestures.XML",
-        "lib/uap10.0/MR.Gestures.dll",
-        "lib/win81/MR.Gestures.WinRT.Tablet.XML",
-        "lib/win81/MR.Gestures.WinRT.Tablet.dll",
-        "lib/win81/MR.Gestures.WinRT.XML",
-        "lib/win81/MR.Gestures.WinRT.dll",
-        "lib/win81/MR.Gestures.XML",
-        "lib/win81/MR.Gestures.dll",
-        "lib/wpa81/MR.Gestures.WinRT.Phone.XML",
-        "lib/wpa81/MR.Gestures.WinRT.Phone.dll",
-        "lib/wpa81/MR.Gestures.WinRT.XML",
-        "lib/wpa81/MR.Gestures.WinRT.dll",
-        "lib/wpa81/MR.Gestures.XML",
-        "lib/wpa81/MR.Gestures.dll",
-        "mr.gestures.1.4.2.2.nupkg.sha512",
-        "mr.gestures.nuspec"
       ]
     },
     "MvvmLightLibs/5.3.0": {
@@ -22914,6 +22854,40 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Xam.Plugins.Vibrate/3.0.1": {
+      "sha512": "gJBkGl74rl+Y7j2gdESjdBYT7wiww3BdHPGVJVcNyjdOG9LDJ1dqbKz1RDJFVfLXlKUg7XPHPpiY6/kh5LxNmA==",
+      "type": "package",
+      "path": "xam.plugins.vibrate/3.0.1",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Vibrate.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Vibrate.dll",
+        "lib/MonoAndroid10/Plugin.Vibrate.pdb",
+        "lib/MonoAndroid10/Plugin.Vibrate.xml",
+        "lib/UAP10/Plugin.Vibrate.Abstractions.dll",
+        "lib/UAP10/Plugin.Vibrate.Abstractions.pdb",
+        "lib/UAP10/Plugin.Vibrate.Abstractions.xml",
+        "lib/UAP10/Plugin.Vibrate.XML",
+        "lib/UAP10/Plugin.Vibrate.dll",
+        "lib/UAP10/Plugin.Vibrate.pdb",
+        "lib/UAP10/Plugin.Vibrate.pri",
+        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Vibrate.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Vibrate.dll",
+        "lib/Xamarin.iOS10/Plugin.Vibrate.xml",
+        "lib/netstandard/Plugin.Vibrate.Abstractions.dll",
+        "lib/netstandard/Plugin.Vibrate.Abstractions.pdb",
+        "lib/netstandard/Plugin.Vibrate.Abstractions.xml",
+        "lib/netstandard/Plugin.Vibrate.deps.json",
+        "lib/netstandard/Plugin.Vibrate.dll",
+        "lib/netstandard/Plugin.Vibrate.pdb",
+        "lib/netstandard/Plugin.Vibrate.xml",
+        "xam.plugins.vibrate.3.0.1.nupkg.sha512",
+        "xam.plugins.vibrate.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.3.2.127": {
       "sha512": "5f//6Ot/zh9Rg9QksTKTA8iH5h+9GMLfA0M6aS9dVRq26ChIwmZlBCk6EETGQVSDx+yHZ5h/WHYfnwU08IriMg==",
       "type": "package",
@@ -23127,10 +23101,10 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "MR.Gestures >= 1.4.2.2",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "MvvmLightLibs >= 5.3.0",
       "SkiaSharp.Views.Forms >= 1.59.1.1",
+      "Xam.Plugins.Vibrate >= 3.0.1",
       "Xamarin.Forms >= 2.3.2.127"
     ],
     "UAP,Version=v10.0.10586": []
@@ -23168,9 +23142,9 @@
     },
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-      "MR.Gestures": "1.4.2.2",
       "MvvmLightLibs": "5.3.0",
       "SkiaSharp.Views.Forms": "1.59.1.1",
+      "Xam.Plugins.Vibrate": "3.0.1",
       "Xamarin.Forms": "2.3.2.127"
     },
     "frameworks": {

@@ -2,25 +2,22 @@
 
 namespace XamarinFormsSamples.GesturePattern
 {
-	public class GestureTouchPoint : ContentView
+	public class GestureTouchPoint
 	{
-		private bool _setDefaults = true;
-
-
 		#region properties
 
 		public bool IsTouched { get; set; }
 
 		public string Value { get; set; }
 
-		public Color DefaultTextColor { get; set; }
+        public Point Location { get; set; }
 
-		public Color HighlightTextColor { get; set; }
+        public Point Center => new Point(this.Location.X + (this.Width/2), this.Location.Y + (this.Height/2));
 
-		public string DefaultText { get; set; }
+        public double Width { get; set; }
 
-		public string HighlightText { get; set; }
-
+        public double Height { get; set; }
+        
 		#endregion
 
 
@@ -28,16 +25,6 @@ namespace XamarinFormsSamples.GesturePattern
 
 		public void Touch()
 		{
-			if (_setDefaults)
-			{
-				//this.DefaultTextColor = this.BackgroundColor;
-				//this.DefaultTextColor = this.TextColor;
-				//this.DefaultText = this.Text;
-				_setDefaults = false;
-			}
-			//this.BackgroundColor = this.HighlightTextColor;
-			//this.TextColor = this.HighlightTextColor;
-			//this.Text = this.HighlightText;
 			this.IsTouched = true;
 		}
 
@@ -45,9 +32,6 @@ namespace XamarinFormsSamples.GesturePattern
 		{
 			if (this.IsTouched)
 			{
-				//this.BackgroundColor = this.DefaultTextColor;
-				//this.TextColor = this.DefaultTextColor;
-				//this.Text = this.DefaultText;
 				this.IsTouched = false;
 			}
 		}
